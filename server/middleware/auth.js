@@ -1,13 +1,13 @@
 import jwt from 'jsonwebtoken';
 
-const JWT_SECRET = process.env.JWT_SECRET;
-
-if (!JWT_SECRET) {
-  throw new Error("JWT_SECRET is missing in environment variables");
-}
-
 export const verifyToken = (req, res, next) => {
   try {
+    const JWT_SECRET = process.env.JWT_SECRET;
+
+    if (!JWT_SECRET) {
+      return res.status(500).json({ error: "Server config error" });
+    }
+
     const token = req.headers.authorization?.split(' ')[1];
 
     if (!token) {
