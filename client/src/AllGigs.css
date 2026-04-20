@@ -1,0 +1,377 @@
+.all-gigs-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7ff 0%, #f0f0ff 100%);
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.all-gigs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-content h1 {
+  font-size: 36px;
+  color: #222;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.header-content p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.gigs-count {
+  padding: 12px 20px;
+  background: white;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.gigs-count strong {
+  color: #667eea;
+  font-size: 18px;
+}
+
+/* ALERTS */
+.alert {
+  max-width: 1400px;
+  margin: 0 auto 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.alert-error {
+  background: #fee;
+  border: 1px solid #fcc;
+  color: #c33;
+}
+
+/* FILTERS SECTION */
+.filters-section {
+  max-width: 1400px;
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 45px 14px 45px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background: #fafbff;
+}
+
+.clear-search {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #999;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-search:hover {
+  color: #333;
+  transform: translateY(-50%) scale(1.2);
+}
+
+.filter-controls {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  min-width: 80px;
+}
+
+.filter-select {
+  padding: 10px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  min-width: 180px;
+}
+
+.filter-select:hover {
+  border-color: #667eea;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* LOADING */
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(102, 126, 234, 0.2);
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner p {
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* EMPTY STATE */
+.empty-state {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  text-align: center;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 16px;
+  border: 2px dashed #e0e0e0;
+}
+
+.empty-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.empty-state h2 {
+  font-size: 28px;
+  color: #333;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+
+.empty-state p {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 30px 0;
+  max-width: 400px;
+}
+
+.clear-btn {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .all-gigs-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-content h1 {
+    font-size: 28px;
+  }
+
+  .filter-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filter-group {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-select {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .all-gigs-container {
+    padding: 20px 15px;
+  }
+
+  .all-gigs-header {
+    gap: 15px;
+  }
+
+  .header-content h1 {
+    font-size: 24px;
+  }
+
+  .header-content p {
+    font-size: 14px;
+  }
+
+  .filters-section {
+    padding: 15px;
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 12px 40px;
+  }
+
+  .filter-group label {
+    min-width: 70px;
+    font-size: 13px;
+  }
+
+  .filter-select {
+    font-size: 13px;
+  }
+
+  .empty-icon {
+    font-size: 60px;
+  }
+
+  .empty-state h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .all-gigs-container {
+    padding: 15px 10px;
+  }
+
+  .header-content h1 {
+    font-size: 20px;
+  }
+
+  .gigs-count {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+
+  .filters-section {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .search-input {
+    padding: 10px 35px;
+    font-size: 13px;
+  }
+
+  .filter-controls {
+    gap: 10px;
+  }
+
+  .filter-group {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .filter-select {
+    font-size: 12px;
+  }
+}
