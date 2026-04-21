@@ -97,7 +97,8 @@ NODE_ENV=production
 ---
 
 ### Frontend (.env)
-git clone https://github.com/your-username/freelancer-marketplace.git
+git clone https://github.com/Nitesh-Pandit/Freelancer-Marketplace/tree/main/client
+
 
 ---
 
@@ -152,7 +153,7 @@ npm run dev
 
 ## 👨‍💻 Author
 
-**Soni Kumari**
+**Nitesh kumar pandit**
 
 ---
 
