@@ -19,7 +19,7 @@ function ClientOrders({ user, token }) {
 
   const fetchUnreadMessages = async () => {
     try {
-      const response = await fetch('https://freelancer-marketplace-1.onrender.com/api/messages/unread', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/messages/unread`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -44,7 +44,7 @@ function ClientOrders({ user, token }) {
   const fetchOrders = async () => {
     try {
       setLoading(true);
-      const response = await fetch('https://freelancer-marketplace-1.onrender.com/api/orders/client/my-orders', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/client/my-orders`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -70,7 +70,7 @@ function ClientOrders({ user, token }) {
     if (!window.confirm('Are you sure you want to cancel this order?')) return;
 
     try {
-      const response = await fetch(`https://freelancer-marketplace-1.onrender.com/api/orders/${orderId}/cancel`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/${orderId}/cancel`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,

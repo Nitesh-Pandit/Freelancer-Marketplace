@@ -54,7 +54,7 @@ function CompleteProfile({ user, token, onProfileComplete }) {
     setLoading(true);
 
     try {
-      const response = await fetch('https://freelancer-marketplace-1.onrender.com/api/auth/complete-profile', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/complete-profile`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

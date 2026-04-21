@@ -23,7 +23,7 @@ function ChatWindow({ order, user, token, onBack }) {
 
   const markMessagesAsRead = async () => {
     try {
-      await fetch(`https://freelancer-marketplace-1.onrender.com/api/messages/${order._id}/read`, {
+      await fetch(`${import.meta.env.VITE_API_URL}/api/messages/${order._id}/read`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -38,7 +38,7 @@ function ChatWindow({ order, user, token, onBack }) {
   const handleCompleteOrder = async () => {
     setCompleting(true);
     try {
-      const response = await fetch('https://freelancer-marketplace-1.onrender.com/api/ratings/complete', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/ratings/complete`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -77,7 +77,7 @@ function ChatWindow({ order, user, token, onBack }) {
 
   const fetchMessages = async () => {
     try {
-      const response = await fetch(`https://freelancer-marketplace-1.onrender.com/api/messages/${order._id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/messages/${order._id}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -115,7 +115,7 @@ function ChatWindow({ order, user, token, onBack }) {
 
     setSending(true);
     try {
-      const response = await fetch('https://freelancer-marketplace-1.onrender.com/api/messages', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/messages`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

@@ -18,7 +18,7 @@ function MyGigs({ user, token }) {
 
   const fetchFreelancerGigs = async () => {
     try {
-      const response = await fetch('https://freelancer-marketplace-1.onrender.com/api/gigs/freelancer/my-gigs', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/gigs/freelancer/my-gigs`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },

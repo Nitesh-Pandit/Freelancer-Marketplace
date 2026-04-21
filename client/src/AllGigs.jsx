@@ -21,7 +21,7 @@ function AllGigs({ onGigClick }) {
 
   const fetchAllGigs = async () => {
     try {
-      const response = await fetch('https://freelancer-marketplace-1.onrender.com/api/gigs');
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/gigs`);
       const data = await response.json();
 
       if (response.ok) {

@@ -9,7 +9,7 @@ function GigCard({ gig, isOwner, onEdit, onDelete, token }) {
     setDeleting(true);
 
     try {
-      const response = await fetch(`https://freelancer-marketplace-1.onrender.com/api/gigs/${gig.id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/gigs/${gig.id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

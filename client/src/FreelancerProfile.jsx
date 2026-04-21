@@ -23,7 +23,7 @@ const fetchFreelancerRatings = async () => {
 
   try {
     const response = await fetch(
-      `https://freelancer-marketplace-1.onrender.com/api/ratings/freelancer/${user.id}`
+      `${import.meta.env.VITE_API_URL}/api/ratings/freelancer/${user.id}`
     );
 
     const data = await response.json();
