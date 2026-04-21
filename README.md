@@ -1,88 +1,170 @@
-# Freelancer Marketplace - MERN Stack
+# 🚀 Freelancer Marketplace
 
-A full-stack marketplace application built with MongoDB, Express, React, and Node.js.
+🔗 **Live Demo:**  
+👉 https://freelancer-marketplace-sandy.vercel.app/
 
-## Project Structure
+---
 
-```
-├── server/          # Node.js + Express backend
-├── client/          # React frontend
-└── README.md        # This file
-```
+## 📌 Overview
 
-## Getting Started
+Freelancer Marketplace is a full-stack web application where clients can hire freelancers and freelancers can showcase their services (gigs), manage orders, and receive ratings.
 
-### Prerequisites
-- Node.js (v14 or higher)
-- MongoDB (local or cloud instance)
-- npm or yarn
+This project demonstrates real-world features like authentication, role-based access, order management, and messaging.
 
-### Installation
+---
 
-1. **Install Server Dependencies**
-   ```bash
-   cd server
-   npm install
-   cd ..
-   ```
+## ✨ Features
 
-2. **Install Client Dependencies**
-   ```bash
-   cd client
-   npm install
-   cd ..
-   ```
+### 👤 Authentication
+- Secure user registration & login
+- JWT-based authentication
+- Role-based access (Client / Freelancer)
 
-### Running the Project
+---
 
-**Option 1: Run Both Server and Client Separately**
+### 💼 Freelancer Features
+- Create, edit, and delete gigs
+- Manage personal dashboard
+- Track orders
+- View ratings & reviews
 
-Terminal 1 - Start the Server:
-```bash
-cd server
-npm run dev
-```
+---
 
-Terminal 2 - Start the Client:
-```bash
-cd client
-npm run dev
-```
+### 🧑‍💻 Client Features
+- Browse freelancers and gigs
+- Hire freelancers
+- Manage orders
+- Cancel orders
 
-The server will run on `http://localhost:5000` and client on `http://localhost:3000`
+---
 
-## Environment Variables
+### ⭐ Rating System
+- Clients can rate freelancers
+- Average rating calculation
+- Ratings visible on gigs and profiles
 
-### Server (.env)
-```
+---
+
+### 💬 Chat System
+- Messaging between client and freelancer
+- Unread message indicator
+
+---
+
+### 📦 Order System
+- Create orders
+- Accept / Complete / Cancel orders
+- Order status tracking
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Vite
+- CSS
+
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MongoDB Atlas
+
+### Authentication
+- JWT (JSON Web Token)
+
+### Deployment
+- Frontend: Vercel
+- Backend: Render
+
+---
+
+## 🌐 API Base URL
+https://freelancer-marketplace-1.onrender.com
+
+---
+
+## ⚙️ Environment Variables
+
+### Backend (.env)
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/freelancer-marketplace
-JWT_SECRET=your_jwt_secret_key_here
-NODE_ENV=development
-```
+MONGODB_URI=your_mongodb_atlas_url
+JWT_SECRET=your_secret_key
+NODE_ENV=production
 
-## API Endpoints
+---
 
-- `GET /api/health` - Health check endpoint
+### Frontend (.env)
+git clone https://github.com/your-username/freelancer-marketplace.git
 
-## Technologies Used
+---
 
-- **Frontend**: React 18, Vite, React Router, Axios
-- **Backend**: Express, Node.js
-- **Database**: MongoDB, Mongoose
-- **Authentication**: JWT, bcryptjs
-- **Other**: CORS, dotenv
+### 2️⃣ Backend Setup
+cd server
+npm install
+npm start
 
-## Development Commands
+---
 
-**Server:**
-- `npm start` - Start server in production mode
-- `npm run dev` - Start server with nodemon (development mode)
+### 3️⃣ Frontend Setup
+cd client
+npm install
+npm run dev
 
-**Client:**
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
+---
 
-## License
-ISC
+## 📸 Screenshots
+
+> (Add screenshots here for better presentation)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
+![alt text](image-8.png)
+![alt text](image-9.png)
+![alt text](image-10.png)
+![alt text](image-11.png)
+![alt text](image-12.png)
+![alt text](image-13.png)
+---
+
+## ⚠️ Known Limitations
+
+- Slow initial load (Render free tier)
+- No payment gateway yet
+- Basic UI design
+
+---
+
+## 🔮 Future Improvements
+
+- Payment integration (Stripe)
+- Notifications system
+- Improved UI/UX
+- Advanced search & filters
+
+---
+
+## 👨‍💻 Author
+
+**Soni Kumari**
+
+---
+
+## 📢 Project Highlights
+
+- Full-stack MERN application  
+- REST API development  
+- JWT authentication system  
+- Role-based access control  
+- Real-world project structure  
+- Deployment on cloud platforms  
+
+---
+
+⭐ If you like this project, give it a star!
