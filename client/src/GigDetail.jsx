@@ -18,7 +18,7 @@ function GigDetail({ gigId, onClose, user, token, onOrderCreatedzz }) {
 
   const fetchGigDetails = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/gigs/${gigId}`);
+      const response = await fetch(`https://freelancer-marketplace-1.onrender.com/api/gigs/${gigId}`);
       const data = await response.json();
 
       if (response.ok) {
@@ -41,7 +41,7 @@ function GigDetail({ gigId, onClose, user, token, onOrderCreatedzz }) {
 
     setHireLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/orders', {
+      const response = await fetch('https://freelancer-marketplace-1.onrender.com/api/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ function GigDetail({ gigId, onClose, user, token, onOrderCreatedzz }) {
 
   const fetchFreelancerRating = async (freelancerId) => {
   try {
-    const res = await fetch(`http://localhost:5000/api/ratings/freelancer/${freelancerId}`);
+    const res = await fetch(`https://freelancer-marketplace-1.onrender.com/api/ratings/freelancer/${freelancerId}`);
     const data = await res.json();
 
     if (res.ok) {

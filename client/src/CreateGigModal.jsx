@@ -38,7 +38,7 @@ function CreateGigModal({ onClose, onGigCreated, token }) {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/gigs', {
+      const response = await fetch('https://freelancer-marketplace-1.onrender.com/api/gigs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

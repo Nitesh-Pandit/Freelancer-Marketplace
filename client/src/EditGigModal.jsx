@@ -38,7 +38,7 @@ function EditGigModal({ gig, onClose, onGigUpdated, token }) {
     setLoading(true);
 
     try {
-      const response = await fetch(`http://localhost:5000/api/gigs/${gig._id}`, {
+      const response = await fetch(`https://freelancer-marketplace-1.onrender.com/api/gigs/${gig._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -19,7 +19,7 @@ function FreelancerOrders({ user, token }) {
 
   const fetchUnreadMessages = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/messages/unread', {
+      const response = await fetch('https://freelancer-marketplace-1.onrender.com/api/messages/unread', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -44,7 +44,7 @@ function FreelancerOrders({ user, token }) {
   const fetchOrders = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5000/api/orders/freelancer/all', {
+      const response = await fetch('https://freelancer-marketplace-1.onrender.com/api/orders/freelancer/all', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -68,7 +68,7 @@ function FreelancerOrders({ user, token }) {
 
   const handleAcceptOrder = async (orderId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/orders/${orderId}/accept`, {
+      const response = await fetch(`https://freelancer-marketplace-1.onrender.com/api/orders/${orderId}/accept`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -96,7 +96,7 @@ function FreelancerOrders({ user, token }) {
 
   const handleRejectOrder = async (orderId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/orders/${orderId}/cancel`, {
+      const response = await fetch(`https://freelancer-marketplace-1.onrender.com/api/orders/${orderId}/cancel`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,

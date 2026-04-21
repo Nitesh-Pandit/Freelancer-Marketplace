@@ -9,11 +9,11 @@ import orderRoutes from './routes/orderRoutes.js';
 import messageRoutes from './routes/messageRoutes.js';
 import ratingRoutes from './routes/ratingRoutes.js';
 
-
 const app = express();
-
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 app.use(express.json());
 
 // Connect to MongoDB

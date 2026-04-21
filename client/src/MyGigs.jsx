@@ -18,7 +18,7 @@ function MyGigs({ user, token }) {
 
   const fetchFreelancerGigs = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/gigs/freelancer/my-gigs', {
+      const response = await fetch('https://freelancer-marketplace-1.onrender.com/api/gigs/freelancer/my-gigs', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },

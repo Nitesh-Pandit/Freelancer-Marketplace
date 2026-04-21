@@ -23,7 +23,7 @@ const fetchFreelancerRatings = async () => {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/ratings/freelancer/${user.id}`
+      `https://freelancer-marketplace-1.onrender.com/api/ratings/freelancer/${user.id}`
     );
 
     const data = await response.json();

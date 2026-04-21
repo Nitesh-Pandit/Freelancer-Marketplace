@@ -9,7 +9,7 @@ function GigGrid({ gigs, onGigClick }) {
     for (let gig of gigs) {
       try {
         const res = await fetch(
-          `http://localhost:5000/api/ratings/freelancer/${gig.userId}`
+          `https://freelancer-marketplace-1.onrender.com/api/ratings/freelancer/${gig.userId}`
         );
         const data = await res.json();
 
