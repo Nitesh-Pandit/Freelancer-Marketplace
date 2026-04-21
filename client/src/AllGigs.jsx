@@ -10,7 +10,7 @@ function AllGigs({ onGigClick }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('newest');
   const [priceRange, setPriceRange] = useState('all');
-
+  
   useEffect(() => {
     fetchAllGigs();
   }, []);
